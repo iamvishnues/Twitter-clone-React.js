@@ -1,5 +1,7 @@
 .Twittericon {
   color: #00a2f3;
+  font-size: 35px !important;
+  margin-left: 20px;
 }
 
 .sidebar__tweet {
@@ -12,7 +14,15 @@
   width: 180px !important;
   margin-left: 10px !important;
   margin-top: 10px !important;
-
   height: 50px !important;
   font-size: 16px !important;
+}
+
+.sidebar {
+  border-right: 1px solid var(--twitter-background) !important;
+  flex: 0.3;
+  /* min-width: 250px; */
+  margin-top: 10px;
+  padding-left: 20px;
+  padding-right: 30px;
 }
