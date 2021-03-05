@@ -13,33 +13,31 @@ function Post({
   verified,
   timestamp,
   password,
+  image,
   text,
   avatar,
 }) {
   return (
     <div className="post">
       <div className="post__avatar">
-        <Avatar src="https://www.syncfusion.com/blogs/wp-content/uploads/2020/07/Introducing-a-Super-Fast-DataGrid-Widget-for-Flutter.jpg" />
+        <Avatar src={avatar} />
       </div>
       <div className="post__body">
         <div className="post__header">
           <div className="post__headerText">
             <h3>
-              Vishnu ES
-              <span>
-                <VerifiedUserIcon className="post__badge" />
-                @vishnues
+              {displayName}
+              <span className="poster__headerSpecial">
+                {verified && <VerifiedUserIcon className="post__badge" />}@
+                {username}
               </span>
             </h3>
           </div>
           <div className="post__headerDescription">
-            <p>
-              Nasa's Perseverance rover landed on Mars at 20:55 GMT on 18
-              February after almost seven months travelling from Earth.
-            </p>
+            <p>{text}</p>
           </div>
         </div>
-        <img src="https://ichef.bbci.co.uk/news/800/cpsprodpb/9353/production/_117351773_mars_perseverance_nrf_0009_0667756352_693ecm_n0030000ncam05000_01_295j.jpg" />
+        <img src={image} width="65%" />
         <div className="post__footer">
           <ChatBubbleOutlineIcon fontSize="small" />
           <RepeatIcon fontSize="small" />
